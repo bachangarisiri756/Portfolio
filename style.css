@@ -1,0 +1,176 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+}
+
+
+/* =========================
+   HEADER & NAVIGATION
+========================= */
+
+header {
+    background: #081c24;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #00d9ff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff;
+    border-bottom: 2px solid #00d9ff;
+}
+
+
+/* =========================
+   HERO SECTION (Home Page)
+========================= */
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+
+/* =========================
+   BUTTON STYLES
+========================= */
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #00d9ff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #00a8cc;
+}
+
+
+/* =========================
+   CONTAINER (Horizontal Layout)
+========================= */
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px;
+    gap: 20px;
+}
+
+
+/* =========================
+   VERTICAL CONTAINER (About Page)
+========================= */
+
+.container-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 10%;
+    gap: 30px;
+}
+
+
+/* =========================
+   CARD DESIGN
+========================= */
+
+.card {
+    background: #112d3b;
+    padding: 20px;
+    width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* About Page Cards */
+.container-vertical .card {
+    width: 100%;
+    max-width: 800px;
+    background: #0f2d3a;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.card h3 {
+    color: #00d9ff;
+    margin-bottom: 8px;
+}
+
+.card hr {
+    border: 0.5px solid #00d9ff;
+    margin: 15px 0;
+}
+
+
+/* =========================
+   FORM STYLING (Contact Page)
+========================= */
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+form button {
+    width: 100%;
+    border: none;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #081c24;
+    margin-top: 20px;
+}
+
+
+/* =========================
+   PROJECT CARD LINK STYLE
+   (Added CSS)
+========================= */
+
+.card a {
+    display: inline-block;
+    margin-bottom: 10px;
+}
