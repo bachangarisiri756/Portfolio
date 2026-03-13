@@ -1,0 +1,314 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+body {
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+nav {
+    background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    padding: 15px 8%;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+nav ul li a:hover,
+nav ul li a.active {
+    color: #00d9ff;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+    height: 90vh;
+    background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.hero h2 {
+    font-size: 45px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px black;
+}
+.hero p {
+    text-shadow: 1px 1px 5px black;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.section {
+    padding: 60px 8%;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #2c5364;
+}
+
+/* =========================
+   CARDS
+========================= */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+}
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    text-align: center;
+    cursor: pointer;
+}
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* =========================
+   INFO BOXES
+========================= */
+.info-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+}
+.info-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* =========================
+   ABOUT PAGE
+========================= */
+.about-section {
+    background: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80") no-repeat center/cover;
+    color: #333;
+    min-height: 80vh;
+    padding: 60px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.about-section .info-box {
+    background: white;
+    color: #333;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   DESTINATIONS PAGE
+========================= */
+.destinations-section .card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+.destinations-section .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.destinations-section .card h3 {
+    margin-bottom: 8px;
+}
+.destinations-section .card p {
+    margin-bottom: 8px;
+}
+.destinations-section .card .best-time {
+    font-weight: bold;
+    color: #2c5364;
+}
+/*popup style*/
+.modal{
+display:none;
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+z-index:1000;
+}
+
+.modal-content{
+background:white;
+margin:10% auto;
+padding:30px;
+width:400px;
+border-radius:10px;
+text-align:center;
+}
+
+.close{
+float:right;
+font-size:28px;
+cursor:pointer;
+}
+
+/* =========================
+   SERVICES PAGE
+========================= */
+
+
+.services-section {
+    padding: 60px 8%;
+    text-align: center;
+
+    /* Light background image */
+    background: 
+    url("https://static.vecteezy.com/system/resources/previews/025/871/594/non_2x/airplane-and-time-to-travel-banner-travel-around-the-world-landmarks-on-the-globe-tourism-trip-concept-journey-in-vacation-illustration-modern-flat-design-vector.jpg") no-repeat center/cover;
+}
+
+.services-section h2{
+    font-size: 36px;
+    color: #2c5364;
+    margin-bottom: 40px;
+}
+
+/* Services grid */
+
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 25px;
+}
+
+/* Service cards */
+
+.service-card{
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.service-card h3{
+    color: #264653;
+    margin-bottom: 10px;
+}
+
+.service-card:hover{
+    transform: translateY(-8px);
+}
+/* =========================
+   CONTACT PAGE
+========================= */
+.contact-section {
+    padding: 60px 8%;
+}
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 40px;
+}
+.contact-info, .contact-form {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-form button {
+    margin-top: 20px;
+    padding: 12px;
+    background: #2c5364;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contact-form button:hover {
+    background: #00bcd4;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: #264653;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media(max-width:768px){
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero h2 {
+        font-size: 30px;
+    }
+}

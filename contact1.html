@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us - ExploreWorld</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<nav>
+    <h1>ExploreWorld</h1>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about1.html">About</a></li>
+        <li><a href="destinations1.html">Destinations</a></li>
+        <li><a href="services1.html">Services</a></li>
+        <li><a href="contact1.html">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="contact-section">
+    <h2 class="section-title">Contact & Book Your Trip</h2>
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+            <h3>Get In Touch</h3>
+            <p><strong>Address:</strong> 123 Travel Street, Hyderabad, India</p>
+            <p><strong>Phone:</strong> +91 98765 43210</p>
+            <p><strong>Email:</strong> exploreworld@email.com</p>
+            <p><strong>Working Hours:</strong> Mon - Sat (9AM - 7PM)</p>
+
+            <hr style="margin:20px 0;">
+
+            <h3>Why Book With Us?</h3>
+            <p>Best Price Guarantee</p>
+            <p>Safe & Secure Booking</p>
+            <p>24/7 Travel Support</p>
+            <p>Customized Tour Packages</p>
+        </div>
+
+        <div class="contact-form">
+            <form id="bookingForm">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter your name" required>
+
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email" required>
+
+                <label>Select Destination</label>
+                <select required>
+                    <option value="">-- Choose Destination --</option>
+                    <option>Paris</option>
+                    <option>Maldives</option>
+                    <option>Dubai</option>
+                    <option>Darjeeling</option>
+                    <option>Goa</option>
+                    <option>Kerala</option>
+                    <option>Manali</option>
+                    <option>Jaipur</option>
+                </select>
+
+                <label>Travel Date</label>
+                <input type="date" required>
+
+                <label>Your Message</label>
+                <textarea id="messageBox" rows="4" placeholder="Write your query or requirements"></textarea>
+
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 ExploreWorld Tourism </p>
+</footer>
+
+<script>
+
+/* Auto-fill selected service from Services page */
+
+window.addEventListener("DOMContentLoaded", function() {
+
+    const selectedService = localStorage.getItem("selectedService");
+
+    if(selectedService){
+        const messageBox = document.getElementById("messageBox");
+        messageBox.value = "I am interested in the service: " + selectedService;
+    }
+
+});
+
+
+/* Form submission */
+
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    alert("Thank you! Your booking request has been submitted.\nWe will contact you shortly.");
+
+    localStorage.removeItem("selectedService");
+
+    this.reset();
+});
+
+</script>
+
+</body>
+</html>

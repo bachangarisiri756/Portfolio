@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - ExploreWorld</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <nav>
+        <h1>ExploreWorld</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about1.html">About</a></li>
+            <li><a href="destinations1.html">Destinations</a></li>
+            <li><a href="services1.html" class="active">Services</a></li>
+            <li><a href="contact1.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div class="service-card" onclick="selectService('Custom Tour Packages')">
+                <h3>Custom Tour Packages</h3>
+                <p>Personalized travel plans based on your budget and interests.</p>
+            </div>
+            <div class="service-card" onclick="selectService('Hotel Booking')">
+                <h3>Hotel Booking</h3>
+                <p>Best hotel deals at top destinations worldwide.</p>
+            </div>
+            <div class="service-card" onclick="selectService('Travel Guide')">
+                <h3>Travel Guide</h3>
+                <p>Professional guides for safe and informative tours.</p>
+            </div>
+            <div class="service-card" onclick="selectService('Transport Services')">
+                <h3>Transport Services</h3>
+                <p>Reliable transport including airport pickup, car rentals, and guided travel.</p>
+            </div>
+            <div class="service-card" onclick="selectService('Ticket Booking')">
+                <h3>Ticket Booking</h3>
+                <p>Easy flight, train, and bus ticket booking with fast confirmation.</p>
+            </div>
+            <div class="service-card" onclick="selectService('24/7 Support')">
+                <h3>24/7 Support</h3>
+                <p>Customer support available anytime during your trip.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>© 2026 ExploreWorld Tourism</p>
+    </footer>
+
+    <!-- JavaScript for Service Selection -->
+    <script>
+        function selectService(serviceName) {
+            // Save the selected service to localStorage
+            localStorage.setItem('selectedService', serviceName);
+            // Optional: alert user
+            alert(`You selected: ${serviceName}\nGo to Contact page to submit your request.`);
+        }
+    </script>
+</body>
+</html>

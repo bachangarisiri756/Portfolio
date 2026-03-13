@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Destinations - ExploreWorld</title>
+<link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+
+<nav>
+<h1>ExploreWorld</h1>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about1.html">About</a></li>
+<li><a href="destinations1.html" class="active">Destinations</a></li>
+<li><a href="services1.html">Services</a></li>
+<li><a href="contact1.html">Contact</a></li>
+</ul>
+</nav>
+
+<section class="section">
+
+<h2 class="section-title">Top Travel Destinations</h2>
+
+<div class="card-container">
+
+<!-- GOA -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+<h3>Goa</h3>
+<p>Golden beaches and nightlife.</p>
+<button onclick="showDetails(
+'Goa',
+'India',
+'Beautiful beaches and vibrant nightlife.',
+'Water sports, beach parties, visiting churches.',
+'November - February',
+'Portuguese and Indian culture mix.',
+'₹15,000 - ₹40,000 trip',
+'A perfect holiday spot for fun, scenic sunsets, and memorable coastal experiences.'
+)">View Details</button>
+</div>
+
+<!-- MANALI -->
+<div class="card">
+<img src="https://t4.ftcdn.net/jpg/01/96/02/01/360_F_196020123_gO0XJKP1zWkKjtLQeIRV05dGcIIlIeAo.jpg">
+<h3>Manali</h3>
+<p>Snow mountains and adventure sports.</p>
+<button onclick="showDetails(
+'Manali',
+'Himachal Pradesh, India',
+'Himalayan mountains and scenic views.',
+'Skiing, trekking, paragliding.',
+'October - February',
+'Himachali mountain culture.',
+'₹12,000 - ₹35,000 trip',
+'A perfect destination for snow adventures and beautiful mountain scenery.'
+)">View Details</button>
+</div>
+
+<!-- DARJEELING -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+<h3>Darjeeling</h3>
+<p>Tea gardens and Himalayan views.</p>
+<button onclick="showDetails(
+'Darjeeling',
+'West Bengal, India',
+'Famous tea plantations and mountain scenery.',
+'Toy train ride, Tiger Hill sunrise.',
+'March - May',
+'Tibetan and Nepali culture.',
+'₹10,000 - ₹30,000 trip',
+'Known for cool climate, scenic tea gardens and stunning Himalayan views.'
+)">View Details</button>
+</div>
+
+<!-- PARIS -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34">
+<h3>Paris</h3>
+<p>City of lights and romance.</p>
+<button onclick="showDetails(
+'Paris',
+'France',
+'Romantic city with world-famous landmarks.',
+'Eiffel Tower, Louvre Museum, river cruise.',
+'April - June',
+'Fashion, art and French cuisine.',
+'₹1,20,000+ trip',
+'One of the most romantic and beautiful cities in the world.'
+)">View Details</button>
+</div>
+
+<!-- MALDIVES -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1549693578-d683be217e58">
+<h3>Maldives</h3>
+<p>Luxury island paradise.</p>
+<button onclick="showDetails(
+'Maldives',
+'Indian Ocean',
+'Crystal clear water and luxury resorts.',
+'Snorkeling, scuba diving, island hopping.',
+'November - April',
+'Island seafood culture.',
+'₹80,000 - ₹2,00,000 trip',
+'A tropical paradise with beautiful beaches and underwater life.'
+)">View Details</button>
+</div>
+
+<!-- DUBAI -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c">
+<h3>Dubai</h3>
+<p>Luxury city of skyscrapers.</p>
+<button onclick="showDetails(
+'Dubai',
+'UAE',
+'Modern luxury city and shopping paradise.',
+'Burj Khalifa visit, desert safari, shopping malls.',
+'November - March',
+'Arabic culture with modern lifestyle.',
+'₹70,000 - ₹1,50,000 trip',
+'Famous for futuristic architecture, luxury hotels and desert adventures.'
+)">View Details</button>
+</div>
+
+<!-- KERALA -->
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMlLRxYviPsWj0zXagpaLYKNX-nBKvnNdSBA&s">
+<h3>Kerala</h3>
+<p>God’s Own Country.</p>
+<button onclick="showDetails(
+'Kerala',
+'South India',
+'Green landscapes and backwaters.',
+'Houseboat rides, tea gardens, wildlife tours.',
+'September - March',
+'Kathakali dance and Ayurveda traditions.',
+'₹15,000 - ₹40,000 trip',
+'A peaceful destination famous for backwaters, nature and relaxation.'
+)">View Details</button>
+</div>
+
+<!-- JAIPUR -->
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuDD8CIjBDuVukV24jBDSDnW6-DUu3qrzpeQ&s">
+<h3>Jaipur</h3>
+<p>Popular for the Pink City.</p>
+<button onclick="showDetails(
+'Jaipur',
+'Rajasthan, India',
+'Famous for royal palaces and historic forts.',
+'Visit Amber Fort, Hawa Mahal and local markets.',
+'October - March',
+'Rich Rajput heritage and colorful festivals.',
+'₹10,000 - ₹30,000 trip',
+'A historic city admired for its royal architecture and vibrant culture.'
+)">View Details</button>
+</div>
+
+</div>
+</section>
+
+<!-- POPUP MODAL -->
+
+<div id="destinationModal" class="modal">
+<div class="modal-content">
+
+<span class="close" onclick="closeModal()">&times;</span>
+
+<h2 id="modalTitle"></h2>
+
+<p><b>Location:</b> <span id="modalLocation"></span></p>
+<p><b>Why Visit:</b> <span id="modalWhy"></span></p>
+<p><b>Things to Do:</b> <span id="modalThings"></span></p>
+<p><b>Best Time:</b> <span id="modalBest"></span></p>
+<p><b>Culture:</b> <span id="modalCulture"></span></p>
+<p><b>Budget:</b> <span id="modalBudget"></span></p>
+<p><b>Why Tourists Love It:</b> <span id="modalWhyTourists"></span></p>
+
+</div>
+</div>
+
+<footer>
+<p>© 2026 ExploreWorld Tourism</p>
+</footer>
+
+<script>
+
+function showDetails(title,location,why,things,best,culture,budget,whyTourists){
+
+document.getElementById("destinationModal").style.display="block";
+
+document.getElementById("modalTitle").innerText = title;
+document.getElementById("modalLocation").innerText = location;
+document.getElementById("modalWhy").innerText = why;
+document.getElementById("modalThings").innerText = things;
+document.getElementById("modalBest").innerText = best;
+document.getElementById("modalCulture").innerText = culture;
+document.getElementById("modalBudget").innerText = budget;
+document.getElementById("modalWhyTourists").innerText = whyTourists;
+
+}
+
+function closeModal(){
+document.getElementById("destinationModal").style.display="none";
+}
+
+</script>
+
+</body>
+</html>
